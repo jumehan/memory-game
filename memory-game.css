@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gudea", sans-serif;
+  color: #48304D;
+}
+body {
+  background: #D2F1E4;
+}
+h1 {
+  font-family: 'Bangers', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #48304D;
+}
+span {
+  font-size: 16px;
+  font-style: italic;
+}
+.wrapper {
+  box-sizing: border-box;
+  width: 32em;
+  padding-left: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 2em;
+  background-color: rgba(182, 88, 160, 0.158);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0.9em 3em rgba(151, 101, 139, 0.194);
+}
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.5em;
+}
+.stats-container {
+  text-align: right;
+  margin-bottom: 1.2em;
+}
+.stats-container span {
+  font-weight: 600;
+  box-sizing: border-box;
+  font-family: "Gudea", sans-serif;
+}
+.card-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #48304D;
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+}
+.card-before {
+  background-color: #D2F1E4;
+}
+#flipped {
+  width: 50%;
+}
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #D2F1E4;
+  top: 0;
+}
+#play {
+  width: 100px;
+  margin-bottom: 10px;
+  border: 1px dashed #000000;
+  border-radius: 10px;
+  box-shadow: 0 0.9em 3em rgba(151, 101, 131, 0.583);
+}
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+#start {
+  background: #F865B0;
+  border: 1px dashed #000000;
+}
+#stop {
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background-color: #48304D;
+  border: 1px dashed #FBCAEF;
+}
+.hide {
+  display: none;
+}
+#results {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#results h2 {
+  font-family: 'Bangers', cursive;
+  font-style: normal;
+  font-size: 32px;
+  color: #E637BF;
+}
+#results h4 {
+  font-size: 16px;
+  margin: 0.6em 0 1em 0;
+  color: #48304D;
+}
