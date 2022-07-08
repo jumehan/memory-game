@@ -113,7 +113,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             //if wincount = total cards/2, user wins, game ends
             if (winCount == Math.floor(cardValues.length / 2)) {
               var newScore = movesCount.toFixed(0);
-
+              //check for highscore and save to localstorage
               if (prevHighScore && parseFloat(prevHighScore) > newScore){
                   localStorage.setItem('score', newScore);
               }
